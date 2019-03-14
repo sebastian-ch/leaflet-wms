@@ -112,12 +112,13 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
         }).addTo(map2);
 
-      /*  var nexrad1 = L.tileLayer.wms("http://geodata.hawaii.gov/arcgis/services/ParcelsZoning/MapServer/WMSServer?request=GetCapabilities&service=WMS", {
-            //layers: '11',
-            //format: 'image/png',
-            //transparent: true,
-            //attribution: "Weather data © 2012 IEM Nexrad"
-        }).addTo(map2); */
+        var nexrad1 = L.tileLayer.wms("https://hazards.fema.gov/gis/nfhl/rest/services/public/NFHLWMS/MapServer/WMSServer", {
+            layers: '0',
+            format: 'image/png',
+            transparent: true,
+            
+            
+        }).addTo(map2);
 
 
         ///////////////////////////////////////////////////////////////////////////////////////
