@@ -90,7 +90,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
         }).addTo(map);
 
-        var nexrad = L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
+        var nexrad = L.tileLayer.wms("https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
             layers: 'nexrad-n0r-900913',
             format: 'image/png',
             transparent: true,
@@ -112,12 +112,12 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
         }).addTo(map2);
 
-        var nexrad1 = L.tileLayer.wms("http://geodata.hawaii.gov/arcgis/services/ParcelsZoning/MapServer/WMSServer?request=GetCapabilities&service=WMS", {
+      /*  var nexrad1 = L.tileLayer.wms("http://geodata.hawaii.gov/arcgis/services/ParcelsZoning/MapServer/WMSServer?request=GetCapabilities&service=WMS", {
             //layers: '11',
             //format: 'image/png',
             //transparent: true,
             //attribution: "Weather data © 2012 IEM Nexrad"
-        }).addTo(map2);
+        }).addTo(map2); */
 
 
         ///////////////////////////////////////////////////////////////////////////////////////
@@ -134,12 +134,12 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
         }).addTo(map3);
 
-        var nexrad1 = L.tileLayer.wms("http://geodata.hawaii.gov/arcgis/services/ParcelsZoning/MapServer/WMSServer?request=GetCapabilities&service=WMS", {
+ /*       var nexrad2 = L.tileLayer.wms("http://geodata.hawaii.gov/arcgis/services/ParcelsZoning/MapServer/WMSServer?request=GetCapabilities&service=WMS", {
             //layers: '11',
             //format: 'image/png',
             //transparent: true,
             //attribution: "Weather data © 2012 IEM Nexrad"
-        }).addTo(map3);
+        }).addTo(map3); */
         
     </script>
 </body>
