@@ -14,32 +14,34 @@
             font-family: Lato, sans-serif;
             color: #0D0000;
         }
-        
+
         header {
             width: 80%;
             margin: 10px auto 10px auto;
         }
-        
+
         h1 {
             display: inline-block;
             margin-right: 20px;
             color: #001323;
         }
-        
-        
-        #map1, #map2, #map3 {
+
+
+        #map1,
+        #map2,
+        #map3 {
             width: 80%;
             height: 540px;
             margin: 10px auto 10px auto;
             background: whitesmoke;
             border: 2px solid #dddedf;
         }
-        
+
         footer {
             width: 80%;
             margin: 10px auto 10px auto;
         }
-        
+
         p {
             font-size: 1em;
             color: #001323;
@@ -74,8 +76,8 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-   
-  
+
+
     <script>
         // create Leaflet map
         var map = L.map('map1', {
@@ -103,22 +105,22 @@
         var map2 = L.map('map2', {
             zoomSnap: .2,
             zoomControl: false,
-            center: [21.3225, -157.868],
-            zoom: 8
+            center: [39.368, -97.723],
+            zoom: 15
         });
 
         L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager_nolabels/{z}/{x}/{y}.png', {
             maxZoom: 18,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
+        }) //.addTo(map2);
+
+        var nexrad1 = L.tileLayer.wms("http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/TaxParcel/AssessorsBasemap/MapServer/", {
+            //layers: '0',
+            //format: 'image/png',
+            //transparent: true
+
         }).addTo(map2);
 
-        var nexrad1 = L.tileLayer.wms("https://hazards.fema.gov/gis/nfhl/rest/services/public/NFHLWMS/MapServer/WMSServer", {
-            layers: '0',
-            format: 'image/png',
-            transparent: true,
-            
-            
-        }).addTo(map2);
 
 
         ///////////////////////////////////////////////////////////////////////////////////////
@@ -135,13 +137,12 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
         }).addTo(map3);
 
- /*       var nexrad2 = L.tileLayer.wms("http://geodata.hawaii.gov/arcgis/services/ParcelsZoning/MapServer/WMSServer?request=GetCapabilities&service=WMS", {
-            //layers: '11',
-            //format: 'image/png',
-            //transparent: true,
-            //attribution: "Weather data © 2012 IEM Nexrad"
-        }).addTo(map3); */
-        
+        /*       var nexrad2 = L.tileLayer.wms("http://geodata.hawaii.gov/arcgis/services/ParcelsZoning/MapServer/WMSServer?request=GetCapabilities&service=WMS", {
+                   //layers: '11',
+                   //format: 'image/png',
+                   //transparent: true,
+                   //attribution: "Weather data © 2012 IEM Nexrad"
+               }).addTo(map3); */
     </script>
 </body>
 
