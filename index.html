@@ -27,11 +27,9 @@
         }
 
 
-        #map1,
-        #map2,
-        #map3 {
+        #map1 {
             width: 80%;
-            height: 540px;
+            height: 740px;
             margin: 10px auto 10px auto;
             background: whitesmoke;
             border: 2px solid #dddedf;
@@ -59,24 +57,8 @@
         <p>Source: <a href="https://mesonet.agron.iastate.edu/ogc/" target="blank">Iowa Environmental Mesonet</a> </p>
     </footer>
 
-    <header>
-        <h1>Second Map</h1>
-    </header>
-    <div id="map2"></div>
-    <footer>
-        <p>Source: <a href="https://mesonet.agron.iastate.edu/ogc/" target="blank">Iowa Environmental Mesonet</a> </p>
-    </footer>
-
-    <header>
-        <h1>Third Map</h1>
-    </header>
-    <div id="map3"></div>
-    <footer>
-        <p>Source: <a href="https://mesonet.agron.iastate.edu/ogc/" target="blank">Iowa Environmental Mesonet</a> </p>
-    </footer>
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-
 
     <script>
         // create Leaflet map
@@ -99,50 +81,6 @@
             attribution: "Weather data © 2012 IEM Nexrad"
         }).addTo(map);
 
-
-        ///////////////////////////////////////////////////////////////////////////////////////
-
-        var map2 = L.map('map2', {
-            zoomSnap: .2,
-            zoomControl: false,
-            center: [39.368, -97.723],
-            zoom: 15
-        });
-
-        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager_nolabels/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
-        }) //.addTo(map2);
-
-        var nexrad1 = L.tileLayer.wms("http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/TaxParcel/AssessorsBasemap/MapServer/", {
-            //layers: '0',
-            //format: 'image/png',
-            //transparent: true
-
-        }).addTo(map2);
-
-
-
-        ///////////////////////////////////////////////////////////////////////////////////////
-
-        var map3 = L.map('map3', {
-            zoomSnap: .2,
-            zoomControl: false,
-            center: [21.3225, -157.868],
-            zoom: 8
-        });
-
-        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager_nolabels/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
-        }).addTo(map3);
-
-        /*       var nexrad2 = L.tileLayer.wms("http://geodata.hawaii.gov/arcgis/services/ParcelsZoning/MapServer/WMSServer?request=GetCapabilities&service=WMS", {
-                   //layers: '11',
-                   //format: 'image/png',
-                   //transparent: true,
-                   //attribution: "Weather data © 2012 IEM Nexrad"
-               }).addTo(map3); */
     </script>
 </body>
 
